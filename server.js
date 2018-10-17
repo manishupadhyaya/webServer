@@ -57,6 +57,11 @@ app.get('/bad',(req,res)=>{
         errorMessage: "Bad Response"
     })
 })
+app.get('/projects',(req,res,next)=>{
+    res.render('projects.hbs',{
+        pageTitle: 'Project Page'
+    })
+})
 app.listen(port,()=>{
     console.log("Server is up on port 3000")
 });
